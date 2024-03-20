@@ -1,21 +1,13 @@
 import React from 'react';
-import ReactDOM from 'react-dom/client';
+import ReactDOM from 'react-dom';
 import './index.css';
-import App from './App';
-
-import {BrowserRouter} from "react-router-dom";
+import App from './App'; // Шлях до вашого компонента App
 
 
-const root = ReactDOM.createRoot(
-  document.getElementById('root') as HTMLElement
-);
-root.render(
-  
+ReactDOM.render(
   <React.StrictMode>
-    <BrowserRouter basename="/task-list-front-end"  >
-      <App />
-    </BrowserRouter>
-  </React.StrictMode>
+    <App /> 
+  </React.StrictMode>,
+  document.getElementById('root')
 );
-
 
